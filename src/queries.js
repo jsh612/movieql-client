@@ -10,3 +10,22 @@ export const HOME_PAGE = gql`
     }
   }
 `;
+
+export const MOVIE_DETAILS = gql`
+  # query getMovieDetails($movieId: Int!) 는 오직 아폴로를 위한 구문으로써, 쿼리에 변수를 넣기 위함이다.
+  query getMovieDetails($movieId: Int!) {
+    movie(id: $movieId) {
+      medium_cover_image
+      title
+      rating
+      description_intro
+      language
+      genres
+    }
+    suggestions(id: $movieId) {
+      medium_cover_image
+      title
+      rating
+    }
+  }
+`;
