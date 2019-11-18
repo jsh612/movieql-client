@@ -12,7 +12,8 @@ export const HOME_PAGE = gql`
 `;
 
 export const MOVIE_DETAILS = gql`
-  # query getMovieDetails($movieId: Int!) 는 오직 아폴로를 위한 구문으로써, 쿼리에 변수를 넣기 위함이다.
+  # 쿼리 이름지정 및 변수 사용
+  # https://graphql.org/learn/queries/#operation-name
   query getMovieDetails($movieId: Int!) {
     movie(id: $movieId) {
       medium_cover_image
