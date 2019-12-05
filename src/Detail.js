@@ -44,6 +44,9 @@ const Detail = ({
 }) => {
   console.log(typeof movieId);
   return (
+    // #Query 컴포넌트
+    //  - 컴포넌트 내부에 children 함수를 줘야한다. (이것을 render prop 이라고함)
+    //  - https://www.apollographql.com/docs/react/api/react-components/#query
     <Query query={MOVIE_DETAILS} variables={{ movieId: Number(movieId) }}>
       {({ loading, error, data }) => {
         if (loading) return "loading";
